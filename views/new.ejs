@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+<div class="ui main text container segment">
+  <div class="ui huge header">New User</div>
+  <form class="ui form" action="/users" method="POST">
+    <div class="field">
+      <label>Name</label>
+      <input type="text" name="user[name]" placeholder="Name" />
+    </div>
+    <div class="field">
+      <label>Date of Birth</label>
+      <input
+        id="date-input"
+        type="date"
+        name="user[dateOfBirth]"
+        placeholder="Date of Birth"
+      />
+    </div>
+    <button class="ui green basic button">Submit</button>
+  </form>
+</div>
+<%- include("partials/footer") %>

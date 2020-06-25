@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+<div class="ui main text conatiner">
+  <div class="ui huge header">Assignment</div>
+  <div class="ui top attached segment">
+    <div class="ui divided items">
+      <% users.forEach(function(user){ %>
+      <div class="item">
+        <div class="content">
+          <a class="header" href="/users/<%=user._id%>">
+            <%= user.name %>
+          </a>
+          <div class="meta">
+            <span><%= user.dateOfBirth.toISOString() %></span>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer") %>
